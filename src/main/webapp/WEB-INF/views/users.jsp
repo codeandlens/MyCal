@@ -1,20 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
- 
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Users</title>
- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" > 
-<!-- <link rel="stylesheet" type="text/css" href="http://localhost:8080/Mycal/resources/css/bootstrap.min.css" > -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
-<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+<%@ include file="/common/header.jsp" %>	
 
-
-</head>
 <body onload="load();">
-
         <input type="hidden" id="user_id">
         Name: <input type="text" id="name" required="required" name="user_name"><br>
         Email: <input type="email" id="email" required="required" name="email"><br>
@@ -33,9 +19,7 @@
             </tr>
         </table>
              
-     <button class="btn btn-success">okay</button>
-<!--      <script src="resources/js/bootstrap.min.js"></script> -->
-     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
+
     <script type="text/javascript">
     data = "";
     submit = function(){
@@ -91,5 +75,4 @@
          
     </script>
      
-</body>
-</html>
+<%@ include file="/common/footer.jsp" %>

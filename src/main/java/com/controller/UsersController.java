@@ -22,13 +22,13 @@ import com.entities.Users;
 import com.services.UsersServices;
  
 @Controller
-@RequestMapping("users")
+//@RequestMapping("users")
 public class UsersController {
  
     @Autowired
     UsersServices userServices;
     
-    @RequestMapping(value = "/page", method = RequestMethod.GET)
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
     public ModelAndView getPage() {
         ModelAndView view = new ModelAndView("users");
         return view;

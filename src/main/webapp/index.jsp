@@ -1,20 +1,46 @@
-<html>
-<head>
-<title>Spring MVC demo</title>
-<%--  <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/bootstrap/css/bootstrap.min.css" > --%>
+<%@ include file="common/header.jsp" %>
 
- <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css" > 
-</head>
-<body>
-    <h2>
-        <a href="users/page">Click to go CRUD Operations Page</a>
-    </h2>
-  	<button class="btn btn-success">okay</button>
-  	
-    <script src="resources/js/jquery.min.js"></script>
+
+<!--      banner         -->
+<!-- <div class="jumbotron" > -->
+<!--   <div class="container text-center"> -->
+<!--     <img src="http://www.uppic.org/image-F12B_58130D6A.jpg" /> -->
+<!--   </div> -->
+<!-- </div> -->
+ 
+
+
+<!--         left         -->
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Panel Heading</div>
+				<div class="panel-body" style="height: 100%;">Panel Content</div>
+			</div>
+
+		</div>
     
-     <script src="resources/js/bootstrap.min.js"></script>  
     
+<!--       center       -->
+    <div class="col-sm-8 text-left" style="height: 100%;"> 
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
+      
+    </div>
     
-</body>
-</html>
+<!--       right       -->
+    <div class="col-sm-2 sidenav">
+		<div class="panel panel-default">
+			<div class="panel-heading">Panel Heading</div>
+			<div class="panel-body" style="height: 100%;">Panel Content</div>
+		</div>
+	</div>
+  </div>
+</div>
+
+<%@ include file="common/footer.jsp" %>

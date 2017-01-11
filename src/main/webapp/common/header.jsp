@@ -1,0 +1,70 @@
+<html>
+
+<%-- <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Users</title>
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" > 
+<!-- <link rel="stylesheet" type="text/css" href="http://localhost:8080/Mycal/resources/css/bootstrap.min.css" > -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
+<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
+</head> --%>
+
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Mycal</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
+</head>
+
+
+
+
+<body>
+	<nav class="navbar navbar-inverse " >
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" class="active" href="${pageContext.request.contextPath}/">Mycal</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<!-- 					<li ><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">market</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-haspopup="true"
+						aria-expanded="false">knowledge<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">book</a></li>
+							<li><a href="#">sport</a></li>
+							<li><a href="#">inspiration</a></li>
+						</ul></li>
+				</ul>
+				<form class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<!-- 					<button type="submit" class="btn btn-default">Submit</button> -->
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="${pageContext.request.contextPath}/users"><span class="glyphicon glyphicon-user"></span> users</a></li>
+					<li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span>
+							Login</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
