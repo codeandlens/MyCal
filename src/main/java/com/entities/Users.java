@@ -20,10 +20,13 @@ public class Users {
 	
 	@Column(name="user_name")
 	private String user_name;
+	
 	@Column(name="email")
 	private String email;
+	
 	@Column(name="detail")
 	private String detail;
+	
 	@Column(name="level_id")
 	private Integer level_id;
 	

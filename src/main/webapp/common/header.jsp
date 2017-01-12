@@ -11,11 +11,14 @@
 
 
 <head>
-	<meta charset="utf-8" />
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Mycal</title>
+	<script src="resources/js/angular.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
+	
+	
 </head>
 
 
@@ -41,7 +44,7 @@
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<!-- 					<li ><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
-					<li><a href="#">Blog</a></li>
+					<li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
 					<li><a href="#">market</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -68,3 +71,6 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
+	
+	
+	

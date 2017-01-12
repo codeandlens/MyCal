@@ -12,6 +12,8 @@
 <!-- <footer class="container-fluid text-center"> -->
 <!--   <p>Footer Text</p> -->
 <!-- </footer> -->
+
+
 <script src="resources/js/jquery.min.js"></script>
 <script src="resources/js/bootstrap.min.js"></script>
 </body>

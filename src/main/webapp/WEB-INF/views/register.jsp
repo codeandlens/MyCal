@@ -12,10 +12,8 @@
 					<!-- Username -->
 					<label class="control-label" for="username">Username</label>
 					<div class="controls">
-						<input type="text" id="username" name="username" placeholder=""
+						<input type="text" id="username" name="username" placeholder="Username"
 							class="form-control input-sm">
-						<p class="help-block">Username can contain any letters or
-							numbers, without spaces</p>
 					</div>
 				</div>
 
@@ -23,9 +21,8 @@
 					<!-- E-mail -->
 					<label class="control-label" for="email">E-mail</label>
 					<div class="controls">
-						<input type="text" id="email" name="email" placeholder=""
+						<input type="text" id="email" name="email" placeholder="Please provide your E-mail"
 							class="form-control input-sm">
-						<p class="help-block">Please provide your E-mail</p>
 					</div>
 				</div>
 
@@ -34,23 +31,20 @@
 					<label class="control-label" for="password">Password</label>
 					<div class="controls">
 						<input type="password" id="password" name="password"
-							placeholder="" class="form-control input-sm">
-						<p class="help-block">Password should be at least 4 characters</p>
+							placeholder="Password should be at least 4 characters" class="form-control input-sm">
 					</div>
 				</div>
 
 				<div class="control-group">
 					<!-- Password -->
-					<label class="control-label" for="password_confirm">Password
-						(Confirm)</label>
+					<label class="control-label" for="password_confirm">Password (Confirm)</label>
 					<div class="controls">
 						<input type="password" id="password_confirm"
-							name="password_confirm" placeholder=""
+							name="password_confirm" placeholder="Please confirm password"
 							class="form-control input-sm">
-						<p class="help-block">Please confirm password</p>
 					</div>
 				</div>
-
+				<br>
 				<div class="control-group">
 					<!-- Button -->
 					<div class="controls">
