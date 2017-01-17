@@ -11,5 +11,6 @@ public interface BlogsServices {
 	public List<Blogs> list();
 	
 	public boolean delete(Blogs blogs);
+	
 
 }

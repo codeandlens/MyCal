@@ -27,4 +27,5 @@ public class BlogsServicesImpl implements BlogsServices{
 		return blogsDao.dalete(blogs);
 	}
 
+
 }

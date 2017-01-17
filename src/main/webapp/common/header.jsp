@@ -1,27 +1,14 @@
+<%@ page language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html>
-
-<%-- <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Users</title>
- <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" > 
-<!-- <link rel="stylesheet" type="text/css" href="http://localhost:8080/Mycal/resources/css/bootstrap.min.css" > -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script> -->
-<script src="${pageContext.request.contextPath}/resources/js/jquery.min.js"></script>
-</head> --%>
-
-
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Mycal</title>
-	<script src="resources/js/angular.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css">
-	
-	
+	<script src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
 </head>
-
-
 
 
 <body>
@@ -44,8 +31,8 @@
 				id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<!-- 					<li ><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+					<li><a href="${pageContext.request.contextPath}/boards">Boards</a></li>
 					<li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
-					<li><a href="#">market</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">knowledge<span class="caret"></span></a>
@@ -62,9 +49,14 @@
 					<!-- 					<button type="submit" class="btn btn-default">Submit</button> -->
 				</form>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="${pageContext.request.contextPath}/users"><span class="glyphicon glyphicon-user"></span> users</a></li>
-					<li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span>
-							Login</a></li>
+<%-- 					<li><a href="${pageContext.request.contextPath}/users"><span class="glyphicon glyphicon-user"></span> users</a></li> --%>
+					<li>
+					<% if (session.getAttribute("user") == null) { %>
+					    <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<% } else {%>
+					    <li><a href="${pageContext.request.contextPath}/user-setting"> welcome : <span class="glyphicon glyphicon-user"></span> ${user}</a></li>
+						<li><a href="${pageContext.request.contextPath}/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					<% } %>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

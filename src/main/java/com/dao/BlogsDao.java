@@ -12,5 +12,6 @@ public interface BlogsDao {
 	
 	public boolean dalete(Blogs blogs);
 	
+	
 
 }

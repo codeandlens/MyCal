@@ -8,13 +8,16 @@ import java.util.Map;
 
 
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
  
+
 
 
 
@@ -30,7 +33,14 @@ public class UsersController {
     
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public ModelAndView getPage() {
-        ModelAndView view = new ModelAndView("users");
+        ModelAndView view = new ModelAndView("page-user/users");
+        return view;
+    }
+    
+    
+    @RequestMapping(value = "/user-setting", method = RequestMethod.GET)
+    public ModelAndView userSetting() {
+       ModelAndView view = new ModelAndView("page-user/user-setting");
         return view;
     }
  
@@ -76,4 +86,42 @@ public class UsersController {
  
         return map;
     }
+    
+    
+    @RequestMapping(value = "/register-users", method = RequestMethod.POST)
+    public ModelAndView preformRegister(Users users) {
+    	ModelAndView view = new ModelAndView("redirect:/login");
+        Map<String, Object> map = new HashMap<String, Object>();
+        
+        String passwordEncode = users.getPassword();
+        users.setPassword(encode(passwordEncode));
+        
+        System.out.println("sssss");
+        if (userServices.saveOrUpdate(users)) {
+            map.put("status", "200");
+            map.put("message", "Your record have been saved successfully");
+        }
+ 
+        return view;
+    }
+    
+    
+    
+    
+   public String encode(String s) {
+		String result = "";
+		try {
+			java.security.MessageDigest digest = java.security.MessageDigest.
+				getInstance("SHA-256");
+			byte[] hash = digest.digest(s.getBytes("UTF-8"));
+			for (int i = 0; i < hash.length; i++) {
+				String hex = Integer.toHexString(0xff & hash[i]);
+				if (hex.length() == 1)
+					result += '0';
+				result += hex;
+			}
+		} catch (Exception e) {}
+		return result;
+    }
+    
 }

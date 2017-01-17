@@ -23,6 +23,9 @@ public class Blogs {
 	@Column(name="blog_name")
 	private String blog_name;
 	
+	@Column(name="blog_sub_detail")
+	private String blog_sub_detail;
+	
 	@Column(name="blog_detail")
 	private String blog_detail;
 	
@@ -45,6 +48,13 @@ public class Blogs {
 	}
 	public void setBlog_name(String blog_name) {
 		this.blog_name = blog_name;
+	}
+	
+	public String getBlog_sub_detail() {
+		return blog_sub_detail;
+	}
+	public void setBlog_sub_detail(String blog_sub_detail) {
+		this.blog_sub_detail = blog_sub_detail;
 	}
 	public String getBlog_detail() {
 		return blog_detail;
