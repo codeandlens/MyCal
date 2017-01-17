@@ -4,7 +4,7 @@
 
 <div class="container">
 	<div ng-app="myApp" ng-controller="Controller" >
-	<form class="form-horizontal" action='${pageContext.request.contextPath}/perform-board-add' method="POST">
+	<form class="form-horizontal" accept-charset="UTF-8" action='${pageContext.request.contextPath}/perform-board-add' method="POST">
 		<div class="row">
 			<div class="col-sm-2"></div>
 				<div class="col-sm-6">
