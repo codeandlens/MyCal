@@ -9,6 +9,10 @@ import java.util.Map;
 
 
 
+
+
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +21,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
  
+
+
 
 
 
@@ -31,6 +37,9 @@ public class UsersController {
     @Autowired
     UsersServices userServices;
     
+    @Autowired
+    private HttpServletRequest request;
+    
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public ModelAndView getPage() {
         ModelAndView view = new ModelAndView("page-user/users");
@@ -41,6 +50,7 @@ public class UsersController {
     @RequestMapping(value = "/user-setting", method = RequestMethod.GET)
     public ModelAndView userSetting() {
        ModelAndView view = new ModelAndView("page-user/user-setting");
+       
         return view;
     }
  

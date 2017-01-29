@@ -3,8 +3,8 @@
 <!-- 	<div class="panel panel-default"> -->
 <!-- 		<div class="panel-heading">Panel Heading</div> -->
 <!-- 		<div class="panel-body" style="height: 60%;"> -->
-			<img src="http://www.soccersuck.com/img/banner/2939059984.gif" width="175" height="350">
-			<img src="http://www.soccersuck.com/img/banner/2939059984.gif" width="175" height="350">
+<!-- 			<img src="http://www.soccersuck.com/img/banner/2939059984.gif" width="175" height="350"> -->
+<!-- 			<img src="http://www.soccersuck.com/img/banner/2939059984.gif" width="175" height="350"> -->
 <!-- 		</div> -->
 <!-- 	</div> -->
 </div>

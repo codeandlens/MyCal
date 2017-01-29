@@ -33,7 +33,8 @@ public class Users {
 	@Column(name="level_id")
 	private Integer level_id;
 	
-	
+	@Column(name="path_image")
+	private String path_image;
 	
 	public Integer getUser_id() {
 		return user_id;
@@ -71,6 +72,11 @@ public class Users {
 	public void setLevel_id(Integer level_id) {
 		this.level_id = level_id;
 	}
-	
+	public String getPath_image() {
+		return path_image;
+	}
+	public void setPath_image(String path_image) {
+		this.path_image = path_image;
+	}
 
 }

@@ -15,6 +15,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 
+
+
+
+
+
 import com.entities.Users;
 import com.services.UsersServices;
 import com.sun.xml.internal.bind.v2.runtime.output.Encoded;
@@ -35,6 +40,7 @@ public class LoginController {
 	@RequestMapping("/register")
     public ModelAndView getRegister() {
         ModelAndView view = new ModelAndView("page-user/register");
+       
         return view;
     }
 	
@@ -67,6 +73,8 @@ public class LoginController {
 		session.invalidate();
 		return "redirect:/";
 	}
+	
+	
 	
 	
 	
